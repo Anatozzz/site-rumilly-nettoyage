@@ -65,38 +65,41 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <div class="-placeholder">
-                        <span class="text-primary font-bold"></span>
-                    <div class="-placeholder text-4xl text-primary">
-  <i class="fas fa-broom"></i>
-</div>
-
-                    <div class="ml-4">
-                        <h1 class="text-2xl font-bold text-primary">Rumilly Nettoyage</h1>
-                        <p class="text-sm text-gray-600">Depuis 1988</p>
-                    </div>
-                </div>
-                
-                <nav class="hidden md:block">
-                    <ul class="flex space-x-8">
-                        <li><a href="#accueil" class="text-primary hover:text-secondary font-medium">Accueil</a></li>
-                        <li><a href="#apropos" class="text-primary hover:text-secondary font-medium">À propos</a></li>
-                        <li><a href="#services" class="text-primary hover:text-secondary font-medium">Services</a></li>
-                        <li><a href="#contact" class="text-primary hover:text-secondary font-medium">Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <button class="md:hidden text-primary">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+<!-- Header -->
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      
+      <!-- Logo + Titre -->
+      <div class="flex items-center mb-4 md:mb-0">
+        <div class="logo-placeholder text-4xl text-primary">
+          <i class="fas fa-broom"></i> <!-- Icône nettoyage -->
         </div>
-    </header>
+        <div class="ml-4">
+          <h1 class="text-2xl font-bold text-primary">Rumilly Nettoyage</h1>
+          <p class="text-sm text-gray-600">Depuis 1988</p>
+        </div>
+      </div>
+
+      <!-- Menu desktop -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="#accueil" class="text-primary hover:text-secondary font-medium">Accueil</a></li>
+          <li><a href="#apropos" class="text-primary hover:text-secondary font-medium">À propos</a></li>
+          <li><a href="#services" class="text-primary hover:text-secondary font-medium">Services</a></li>
+          <li><a href="#contact" class="text-primary hover:text-secondary font-medium">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton menu mobile -->
+      <button class="md:hidden text-primary">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+  
 
     <!-- Hero Section -->
     <section id="accueil" class="bg-primary text-white py-20">
