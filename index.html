@@ -34,42 +34,66 @@
             background-color: #f8f5f2;
         }
         .bg-primary {
-            background-color: #5e4b3a;
-        }
-        /* Logo placeholder style */
-        .logo-placeholder {
-            width: 150px; height: 150px; display: flex; align-items: center;
-            justify-content: center; border: 2px dashed #5e4b3a; border-radius: 50%; margin: auto;
+            background-color: #6b4f3a;
         }
         .bg-secondary {
-            background-color: #1e3f20;
+            background-color: #4a7c59;
         }
         .text-primary {
-            color: #5e4b3a;
+            color: #6b4f3a;
         }
         .text-secondary {
-            color: #1e3f20;
+            color: #4a7c59;
         }
         .border-primary {
-            border-color: #5e4b3a;
+            border-color: #6b4f3a;
         }
         .border-secondary {
-            border-color: #1e3f20;
+            border-color: #4a7c59;
         }
         .hover-bg-primary:hover {
-            background-color: #6a5948;
+            background-color: #7a5e4a;
         }
         .hover-bg-secondary:hover {
-            background-color: #2a4f2c;
+            background-color: #5a8c69;
         }
         #success-message {
             display: none;
         }
         /* Interactive card: scale and shadow on hover */
         @layer components {
-          .interactive-card {
-            @apply transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-lg;
-          }
+            .interactive-card {
+                @apply transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-lg;
+            }
+        }
+        /* Modern typography and spacing */
+        h1, h2, h3, h4 {
+            @apply font-bold tracking-tight;
+        }
+        h1 { @apply text-3xl md:text-4xl; }
+        h2 { @apply text-2xl md:text-3xl; }
+        h3 { @apply text-xl md:text-2xl; }
+        h4 { @apply text-lg md:text-xl; }
+        p, li, span {
+            @apply text-gray-700 leading-relaxed;
+        }
+        /* Glassmorphism effect */
+        .glassmorphism {
+            @apply bg-white bg-opacity-80 backdrop-blur-sm rounded-lg shadow-lg;
+        }
+        /* Enhanced spacing */
+        .section-padding {
+            @apply py-12 md:py-16;
+        }
+        .container-padding {
+            @apply px-4 md:px-6;
+        }
+        /* Interactive form elements */
+        input, textarea, select {
+            @apply w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300;
+        }
+        button, .button {
+            @apply px-6 py-2 rounded font-medium transition duration-300;
         }
     </style>
 </head>
@@ -111,12 +135,12 @@
   
 
     <!-- Hero Section -->
-    <section id="accueil" class="relative bg-primary text-white py-20" data-aos="fade-up">
+    <section id="accueil" class="relative bg-primary text-white section-padding" data-aos="fade-up">
         <div class="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none" style="background-image: url('https://via.placeholder.com/1600x900');"></div>
-        <div class="container mx-auto px-4 text-center">
+        <div class="container mx-auto container-padding text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Nettoyage professionnel en Haute-Savoie</h2>
             <p class="text-xl md:text-2xl mb-8">Des bureaux propres pour une entreprise saine</p>
-            <a href="#contact" class="bg-secondary hover-bg-secondary text-white px-8 py-3 rounded-full font-medium inline-block transition duration-300">Demander un devis</a>
+            <a href="#contact" class="button bg-secondary hover-bg-secondary text-white">Demander un devis</a>
         </div>
     </section>
 
@@ -161,8 +185,8 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16 bg-gray-50" data-aos="fade-up">
-        <div class="container mx-auto px-4">
+    <section id="services" class="section-padding bg-gray-50" data-aos="fade-up">
+        <div class="container mx-auto container-padding">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary mb-4">Nos services</h2>
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
@@ -170,7 +194,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Nettoyage des vitres" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-window-maximize" aria-hidden="true"></i>
@@ -180,7 +204,7 @@
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Dépoussiérage complet" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-broom" aria-hidden="true"></i>
@@ -190,7 +214,7 @@
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Gestion des déchets" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -200,7 +224,7 @@
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Aspiration professionnelle" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-wind" aria-hidden="true"></i>
@@ -210,7 +234,7 @@
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Lavage des sols" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-mop" aria-hidden="true"></i>
@@ -220,7 +244,7 @@
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Désinfection" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-spray-can" aria-hidden="true"></i>
@@ -233,8 +257,8 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-16 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-4">
+    <section id="contact" class="section-padding bg-white" data-aos="fade-up">
+        <div class="container mx-auto container-padding">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
@@ -290,7 +314,7 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="glassmorphism p-6">
                         <h3 class="text-xl font-bold text-secondary mb-6">Demandez un devis</h3>
                         
                         <!-- Success message (hidden by default) -->
