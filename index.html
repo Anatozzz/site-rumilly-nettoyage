@@ -65,6 +65,12 @@
         #success-message {
             display: none;
         }
+        /* Interactive card: scale and shadow on hover */
+        @layer components {
+          .interactive-card {
+            @apply transform transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-lg;
+          }
+        }
     </style>
 </head>
 <body>
@@ -164,7 +170,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Nettoyage des vitres" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-window-maximize" aria-hidden="true"></i>
@@ -174,7 +180,7 @@
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Dépoussiérage complet" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-broom" aria-hidden="true"></i>
@@ -184,7 +190,7 @@
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Gestion des déchets" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-trash-alt" aria-hidden="true"></i>
@@ -194,7 +200,7 @@
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Aspiration professionnelle" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-wind" aria-hidden="true"></i>
@@ -204,7 +210,7 @@
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Lavage des sols" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-mop" aria-hidden="true"></i>
@@ -214,7 +220,7 @@
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                <div class="interactive-card bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
                     <img src="https://via.placeholder.com/300x200" alt="Désinfection" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
                         <i class="fas fa-spray-can" aria-hidden="true"></i>
