@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Cercle de fond -->
+    <circle cx="16" cy="16" r="16" fill="#6b4f3a"/>
+    
+    <!-- Balai -->
+    <path d="M22 8L16 14L10 8" stroke="#4a7c59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 14V24" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+    <path d="M12 24H20" stroke="#4a7c59" stroke-width="2" stroke-linecap="round"/>
+</svg> 
