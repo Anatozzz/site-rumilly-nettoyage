@@ -137,12 +137,66 @@
   
 
     <!-- Hero Section -->
-    <section id="accueil" class="relative bg-primary text-white section-padding" data-aos="fade-up">
-        <div class="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none" style="background-image: url('https://via.placeholder.com/1600x900');"></div>
-        <div class="container mx-auto container-padding text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Nettoyage professionnel en Haute-Savoie</h2>
-            <p class="text-xl md:text-2xl mb-8">Des bureaux propres pour une entreprise saine</p>
-            <a href="#contact" class="button bg-secondary hover-bg-secondary text-white">Demander un devis</a>
+    <section id="accueil" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+        <!-- Background avec overlay -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <div class="absolute inset-0 bg-primary opacity-80"></div>
+        </div>
+        
+        <!-- Contenu principal -->
+        <div class="container mx-auto container-padding text-center relative z-10">
+            <div class="max-w-3xl mx-auto">
+                <!-- Badge de confiance -->
+                <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full mb-8">
+                    <span class="text-white text-sm font-medium">Depuis 1988 - Entreprise locale</span>
+                </div>
+                
+                <!-- Titre principal -->
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
+                    Nettoyage professionnel<br>
+                    <span class="text-secondary">en Haute-Savoie</span>
+                </h2>
+                
+                <!-- Sous-titre -->
+                <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+                    Des bureaux propres pour une entreprise saine et productive
+                </p>
+                
+                <!-- Bouton CTA -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="button bg-secondary hover:bg-secondary/90 text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Demander un devis
+                    </a>
+                    <a href="tel:0600000000" class="button bg-white/10 hover:bg-white/20 text-white px-8 py-4 text-lg font-medium rounded-full backdrop-blur-sm transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        Nous appeler
+                    </a>
+                </div>
+                
+                <!-- Statistiques -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">35+</div>
+                        <div class="text-white/80">Années d'expérience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">100+</div>
+                        <div class="text-white/80">Clients satisfaits</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-white/80">Service réactif</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vague décorative en bas -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg class="w-full h-16 md:h-24" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path fill="#f8f5f2" d="M0,0 L1440,0 L1440,100 C1440,100 720,50 0,100 Z"></path>
+            </svg>
         </div>
     </section>
 
