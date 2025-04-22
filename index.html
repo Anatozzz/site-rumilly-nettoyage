@@ -575,9 +575,7 @@
             fetch('/', { method: 'POST', body: new FormData(form) })
               .then(() => {
                 document.getElementById('loader').classList.add('hidden');
-                document.getElementById('success-message').style.display = 'block';
-                form.reset();
-                setTimeout(() => document.getElementById('success-message').style.display = 'none', 5000);
+                window.location.href = '/merci.html';
               })
               .catch(() => {
                 document.getElementById('loader').classList.add('hidden');

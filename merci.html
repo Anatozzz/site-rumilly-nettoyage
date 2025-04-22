@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Merci pour votre demande</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px;
-      background-color: #f7f7f7;
-    }
-    h1 {
-      color: #1e3f20;
-      font-size: 2rem;
-    }
-    p {
-      color: #333;
-      font-size: 1.1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - Rumilly Nettoyage</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Merci pour votre demande de devis. Nous vous répondrons dans les plus brefs délais.">
+    <link rel="icon" href="/favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f5f2;
+        }
+        .bg-primary {
+            background-color: #6b4f3a;
+        }
+        .bg-secondary {
+            background-color: #4a7c59;
+        }
+        .text-primary {
+            color: #6b4f3a;
+        }
+        .text-secondary {
+            color: #4a7c59;
+        }
+        @keyframes checkmark {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .checkmark-animation {
+            animation: checkmark 0.8s ease-out forwards;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 0.5s;
+            opacity: 0;
+        }
+    </style>
 </head>
-<body>
-  <h1>Merci !</h1>
-  <p>Votre demande a bien été envoyée. Nous vous contacterons rapidement.</p>
+<body class="min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-md mx-auto">
+            <!-- Icône de validation animée -->
+            <div class="mb-8">
+                <div class="w-24 h-24 mx-auto bg-secondary rounded-full flex items-center justify-center checkmark-animation">
+                    <i class="fas fa-check text-white text-5xl"></i>
+                </div>
+            </div>
+            
+            <!-- Message principal -->
+            <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4 fade-in-up">
+                Merci pour votre demande
+            </h1>
+            
+            <!-- Message secondaire -->
+            <p class="text-xl text-gray-700 mb-8 fade-in-up">
+                Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.
+            </p>
+            
+            <!-- Délai de réponse -->
+            <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                <p class="text-lg text-secondary font-medium">
+                    <i class="fas fa-clock mr-2"></i>
+                    On vous répond sous 24h
+                </p>
+            </div>
+            
+            <!-- Bouton retour -->
+            <div class="mt-8 fade-in-up">
+                <a href="/" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
