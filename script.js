@@ -223,3 +223,101 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Animation de la section hero
+const heroAnimation = () => {
+    const heroSection = document.querySelector('#accueil');
+    const content = heroSection.querySelector('.container');
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles-container absolute inset-0 overflow-hidden';
+    heroSection.insertBefore(particlesContainer, content);
+
+    // Création des particules
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle absolute bg-white/20 rounded-full';
+        particle.style.width = `${Math.random() * 4 + 2}px`;
+        particle.style.height = particle.style.width;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.animation = `float ${Math.random() * 3 + 2}s ease-in-out infinite`;
+        particle.style.animationDelay = `${Math.random() * 2}s`;
+        particlesContainer.appendChild(particle);
+    }
+
+    // Animation de balayage
+    const sweepOverlay = document.createElement('div');
+    sweepOverlay.className = 'sweep-overlay absolute inset-0 bg-primary transform -translate-x-full';
+    heroSection.insertBefore(sweepOverlay, content);
+
+    // Animation de révélation du contenu
+    content.style.opacity = '0';
+    content.style.transform = 'translateY(20px)';
+
+    // Déclenchement des animations
+    setTimeout(() => {
+        sweepOverlay.style.transition = 'transform 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        sweepOverlay.style.transform = 'translateX(100%)';
+        
+        content.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        content.style.opacity = '1';
+        content.style.transform = 'translateY(0)';
+    }, 300);
+
+    // Animation de brillance sur les boutons
+    const buttons = content.querySelectorAll('a.button');
+    buttons.forEach(button => {
+        const glow = document.createElement('div');
+        glow.className = 'glow-effect absolute inset-0 bg-white/20 transform -translate-x-full';
+        button.style.position = 'relative';
+        button.style.overflow = 'hidden';
+        button.appendChild(glow);
+
+        setInterval(() => {
+            glow.style.transition = 'transform 0.8s ease-out';
+            glow.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                glow.style.transition = 'none';
+                glow.style.transform = 'translateX(-100%)';
+                setTimeout(() => {
+                    glow.style.transition = 'transform 0.8s ease-out';
+                }, 50);
+            }, 1000);
+        }, 5000);
+    });
+};
+
+// Ajout des styles d'animation
+const animationStyles = document.createElement('style');
+animationStyles.textContent = `
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.2;
+        }
+        50% {
+            transform: translateY(-20px) translateX(10px);
+            opacity: 0.4;
+        }
+    }
+
+    .particle {
+        pointer-events: none;
+    }
+
+    .sweep-overlay {
+        z-index: 1;
+    }
+
+    .glow-effect {
+        pointer-events: none;
+        z-index: 1;
+    }
+`;
+document.head.appendChild(animationStyles);
+
+// Initialisation de l'animation
+document.addEventListener('DOMContentLoaded', () => {
+    heroAnimation();
+    // ... existing initialization code ...
+});
