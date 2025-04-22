@@ -323,58 +323,90 @@
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
             </div>
             
-            <div class="relative">
-                <div class="testimonial-slider overflow-hidden">
-                    <!-- Avis 1 -->
-                    <div class="testimonial-slide glassmorphism p-6 mb-8">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl mr-4">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary">Marie D.</h4>
-                                <p class="text-sm text-gray-600">Entreprise locale</p>
+            <div class="testimonials-container">
+                <!-- Avis 1 -->
+                <div class="testimonial-bubble" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start space-x-4">
+                        <div class="avatar-circle bg-primary text-white flex-shrink-0">
+                            <span class="text-lg font-medium">MD</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bubble-content bg-white p-6 rounded-2xl shadow-sm relative">
+                                <div class="bubble-arrow"></div>
+                                <p class="text-gray-700 italic mb-4">"Un service impeccable et une équipe très professionnelle. Je recommande vivement !"</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary">Marie D.</h4>
+                                        <p class="text-sm text-gray-600">Entreprise locale</p>
+                                    </div>
+                                    <div class="text-secondary">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-gray-700 italic">"Un service impeccable et une équipe très professionnelle. Je recommande vivement !"</p>
-                    </div>
-                    
-                    <!-- Avis 2 -->
-                    <div class="testimonial-slide glassmorphism p-6 mb-8">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl mr-4">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary">Pierre L.</h4>
-                                <p class="text-sm text-gray-600">Bureau d'études</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 italic">"Des locaux toujours impeccables. Une équipe fiable et réactive."</p>
-                    </div>
-                    
-                    <!-- Avis 3 -->
-                    <div class="testimonial-slide glassmorphism p-6 mb-8">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl mr-4">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary">Sophie M.</h4>
-                                <p class="text-sm text-gray-600">Agence immobilière</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 italic">"Un service de qualité avec des produits respectueux de l'environnement. Parfait !"</p>
                     </div>
                 </div>
-                
-                <!-- Contrôles du slider -->
-                <button class="slider-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full hover:bg-secondary transition duration-300">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full hover:bg-secondary transition duration-300">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+
+                <!-- Avis 2 -->
+                <div class="testimonial-bubble" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start space-x-4">
+                        <div class="avatar-circle bg-primary text-white flex-shrink-0">
+                            <span class="text-lg font-medium">PL</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bubble-content bg-white p-6 rounded-2xl shadow-sm relative">
+                                <div class="bubble-arrow"></div>
+                                <p class="text-gray-700 italic mb-4">"Des locaux toujours impeccables. Une équipe fiable et réactive."</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary">Pierre L.</h4>
+                                        <p class="text-sm text-gray-600">Bureau d'études</p>
+                                    </div>
+                                    <div class="text-secondary">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avis 3 -->
+                <div class="testimonial-bubble" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start space-x-4">
+                        <div class="avatar-circle bg-primary text-white flex-shrink-0">
+                            <span class="text-lg font-medium">SM</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bubble-content bg-white p-6 rounded-2xl shadow-sm relative">
+                                <div class="bubble-arrow"></div>
+                                <p class="text-gray-700 italic mb-4">"Un service de qualité avec des produits respectueux de l'environnement. Parfait !"</p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary">Sophie M.</h4>
+                                        <p class="text-sm text-gray-600">Agence immobilière</p>
+                                    </div>
+                                    <div class="text-secondary">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
