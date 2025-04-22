@@ -3,62 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumilly Nettoyage - Ménage professionnel en Haute-Savoie</title>
+    <title>Rumilly Nettoyage - Nettoyage professionnel en Haute-Savoie</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Rumilly Nettoyage offre des services de nettoyage professionnel et écoresponsable en Haute-Savoie. Contactez-nous pour un devis rapide.">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://site-rumilly-nettoyage.netlify.app/">
+    <meta property="og:title" content="Rumilly Nettoyage - Nettoyage professionnel en Haute-Savoie">
+    <meta property="og:description" content="Services de nettoyage premium et écoresponsables en Haute-Savoie.">
+    <meta property="og:image" content="/og-image.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rumilly Nettoyage - Nettoyage professionnel en Haute-Savoie">
+    <meta name="twitter:description" content="Services de nettoyage premium et écoresponsables en Haute-Savoie.">
+    <meta name="twitter:image" content="/og-image.jpg">
+    <!-- Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-        
+        /* Custom inline utilities */
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f8f5f2;
         }
-        
         .bg-primary {
             background-color: #5e4b3a;
         }
-        
+        /* Logo placeholder style */
+        .logo-placeholder {
+            width: 150px; height: 150px; display: flex; align-items: center;
+            justify-content: center; border: 2px dashed #5e4b3a; border-radius: 50%; margin: auto;
+        }
         .bg-secondary {
             background-color: #1e3f20;
         }
-        
         .text-primary {
             color: #5e4b3a;
         }
-        
         .text-secondary {
             color: #1e3f20;
         }
-        
         .border-primary {
             border-color: #5e4b3a;
         }
-        
         .border-secondary {
             border-color: #1e3f20;
         }
-        
         .hover-bg-primary:hover {
             background-color: #6a5948;
         }
-        
         .hover-bg-secondary:hover {
             background-color: #2a4f2c;
         }
-        
-      -placeholder {
-            width: 150px;
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed #5e4b3a;
-            border-radius: 50%;
-            margin: 0 auto;
-
-
- 
-        
         #success-message {
             display: none;
         }
@@ -92,7 +95,7 @@
       </nav>
 
       <!-- Bouton menu mobile -->
-      <button class="md:hidden text-primary">
+      <button class="md:hidden text-primary" aria-label="Ouvrir le menu" aria-expanded="false">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
@@ -102,7 +105,8 @@
   
 
     <!-- Hero Section -->
-    <section id="accueil" class="bg-primary text-white py-20">
+    <section id="accueil" class="relative bg-primary text-white py-20" data-aos="fade-up">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://via.placeholder.com/1600x900');"></div>
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Nettoyage professionnel en Haute-Savoie</h2>
             <p class="text-xl md:text-2xl mb-8">Des bureaux propres pour une entreprise saine</p>
@@ -111,7 +115,7 @@
     </section>
 
     <!-- À propos -->
-    <section id="apropos" class="py-16 bg-white">
+    <section id="apropos" class="py-16 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary mb-4">À propos de nous</h2>
@@ -151,7 +155,7 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16 bg-gray-50">
+    <section id="services" class="py-16 bg-gray-50" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary mb-4">Nos services</h2>
@@ -160,54 +164,60 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Nettoyage des vitres" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-window-maximize"></i>
+                        <i class="fas fa-window-maximize" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Nettoyage des vitres</h3>
                     <p class="text-gray-700">Un nettoyage minutieux de toutes vos surfaces vitrées pour une transparence parfaite et une luminosité optimale.</p>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Dépoussiérage complet" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-broom"></i>
+                        <i class="fas fa-broom" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Dépoussiérage complet</h3>
                     <p class="text-gray-700">Élimination de la poussière sur toutes les surfaces pour un environnement de travail sain et agréable.</p>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Gestion des déchets" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-trash-alt" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Gestion des déchets</h3>
                     <p class="text-gray-700">Vidange et nettoyage des poubelles avec tri sélectif selon vos consignes.</p>
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Aspiration professionnelle" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-wind"></i>
+                        <i class="fas fa-wind" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Aspiration professionnelle</h3>
                     <p class="text-gray-700">Aspiration complète des sols, moquettes et tissus avec du matériel professionnel.</p>
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Lavage des sols" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-mop"></i>
+                        <i class="fas fa-mop" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Lavage des sols</h3>
                     <p class="text-gray-700">Nettoyage approfondi des sols avec serpillère ou machine adaptée à chaque type de revêtement.</p>
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-500 ease-in-out" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/300x200" alt="Désinfection" class="mx-auto mb-4 w-full h-40 object-cover rounded-lg shadow" loading="lazy">
                     <div class="text-secondary text-4xl mb-4">
-                        <i class="fas fa-spray-can"></i>
+                        <i class="fas fa-spray-can" aria-hidden="true"></i>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-3">Désinfection</h3>
                     <p class="text-gray-700">Désinfection des surfaces fréquemment touchées pour limiter la propagation des germes.</p>
@@ -217,7 +227,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
@@ -278,20 +288,21 @@
                         <h3 class="text-xl font-bold text-secondary mb-6">Demandez un devis</h3>
                         
                         <!-- Success message (hidden by default) -->
-                        <div id="success-message" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                        <div id="success-message" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4" role="alert">
                             Votre demande a bien été envoyée ! Nous vous contacterons rapidement.
                         </div>
                         
                         <!-- Formulaire connecté à votre email via FormSubmit -->
-                        <form id="contact-form" action="https://formsubmit.co/espritcreateur80@gmail.com" method="POST">
-                            <!-- Ajout d'un sujet fixe pour les emails -->
-                            <input type="hidden" name="_subject" value="Nouvelle demande de devis - Rumilly Nettoyage">
-                            
-                            <!-- Redirection après envoi -->
-                            <input type="hidden" name="_next" value="https://site-rumilly-nettoyage.netlify.app/merci.html">
-                        
-                            <!-- Désactivation du captcha -->
-                            <input type="hidden" name="_captcha" value="false">
+                        <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-4">
+                            <input type="hidden" name="form-name" value="contact">
+                            <p class="hidden"><label>Ne pas remplir <input name="bot-field" /></label></p>
+                            <!-- Loader -->
+                            <div id="loader" class="hidden flex items-center justify-center mb-4" role="status" aria-live="polite" aria-label="Chargement">
+                                <svg class="animate-spin h-8 w-8 text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                                </svg>
+                            </div>
                             
                             <div class="mb-4">
                                 <label for="name" class="block text-gray-700 mb-2">Nom</label>
@@ -360,38 +371,39 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         // Mobile menu toggle
-        document.querySelector('button').addEventListener('click', function() {
+        document.querySelector('button[aria-label="Ouvrir le menu"]').addEventListener('click', function() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('hidden');
             nav.classList.toggle('block');
+            this.setAttribute('aria-expanded', nav.classList.contains('block'));
         });
-        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        
-        // Gestion du formulaire
+        // AOS initialization
+        AOS.init({ duration: 800, offset: 100, once: true });
+        // Enhanced contact form
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            // Vous pouvez ajouter ici une validation supplémentaire si besoin
-            // Par défaut, le formulaire sera envoyé à FormSubmit qui redirigera vers votre email
-            
-            // Afficher le message de succès
-            document.getElementById('success-message').style.display = 'block';
-            
-            // Optionnel: Reset le formulaire après 3 secondes
-            setTimeout(() => {
-                this.reset();
-                document.getElementById('success-message').style.display = 'none';
-            }, 5000);
+            e.preventDefault();
+            const form = this;
+            document.getElementById('loader').classList.remove('hidden');
+            fetch('/', { method: 'POST', body: new FormData(form) })
+              .then(() => {
+                document.getElementById('loader').classList.add('hidden');
+                document.getElementById('success-message').style.display = 'block';
+                form.reset();
+                setTimeout(() => document.getElementById('success-message').style.display = 'none', 5000);
+              })
+              .catch(() => {
+                document.getElementById('loader').classList.add('hidden');
+              });
         });
     </script>
 </body>
