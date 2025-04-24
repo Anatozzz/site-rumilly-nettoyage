@@ -104,121 +104,120 @@
 </head>
 <body>
 <!-- Header -->
-<header class="bg-white shadow-md">
-  <div class="container mx-auto px-4 py-6">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      
-      <!-- Logo + Titre -->
-      <div class="flex items-center mb-4 md:mb-0">
-        <div class="logo-placeholder text-4xl text-primary">
-          <i class="fas fa-broom"></i> <!-- Icône nettoyage -->
-        </div>
-        <div class="ml-4">
-          <h1 class="text-2xl font-bold text-primary">Rumilly Nettoyage</h1>
-          <p class="text-sm text-gray-600">Depuis 1988</p>
-        </div>
-      </div>
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo + Titre -->
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="logo-placeholder text-3xl md:text-4xl text-primary">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <div class="ml-3 md:ml-4">
+                    <h1 class="text-xl md:text-2xl font-bold text-primary">Rumilly Nettoyage</h1>
+                    <p class="text-xs md:text-sm text-gray-600">Depuis 1988</p>
+                </div>
+            </div>
 
-      <!-- Menu desktop -->
-      <nav class="hidden md:block">
-        <ul class="flex space-x-8">
-          <li><a href="#accueil" class="text-primary hover:text-secondary font-medium">Accueil</a></li>
-          <li><a href="#apropos" class="text-primary hover:text-secondary font-medium">À propos</a></li>
-          <li><a href="#services" class="text-primary hover:text-secondary font-medium">Services</a></li>
-          <li><a href="#contact" class="text-primary hover:text-secondary font-medium">Contact</a></li>
-        </ul>
-      </nav>
+            <!-- Menu mobile -->
+            <div class="md:hidden w-full">
+                <button id="mobile-menu-button" class="w-full flex justify-between items-center text-primary py-2">
+                    <span>Menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4">
+                    <ul class="flex flex-col space-y-2 px-4">
+                        <li><a href="#accueil" class="block py-2 text-primary hover:text-secondary">Accueil</a></li>
+                        <li><a href="#apropos" class="block py-2 text-primary hover:text-secondary">À propos</a></li>
+                        <li><a href="#services" class="block py-2 text-primary hover:text-secondary">Services</a></li>
+                        <li><a href="#contact" class="block py-2 text-primary hover:text-secondary">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-      <!-- Bouton menu mobile -->
-      <button class="md:hidden text-primary" aria-label="Ouvrir le menu" aria-expanded="false">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
+            <!-- Menu desktop -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#accueil" class="text-primary hover:text-secondary font-medium">Accueil</a></li>
+                    <li><a href="#apropos" class="text-primary hover:text-secondary font-medium">À propos</a></li>
+                    <li><a href="#services" class="text-primary hover:text-secondary font-medium">Services</a></li>
+                    <li><a href="#contact" class="text-primary hover:text-secondary font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
 </header>
 
-  
-
     <!-- Hero Section -->
-    <section id="accueil" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
-        <!-- Background avec overlay -->
+    <section id="accueil" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0" data-aos="fade-up">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
             <div class="absolute inset-0 bg-primary opacity-80"></div>
         </div>
         
-        <!-- Contenu principal -->
-        <div class="container mx-auto container-padding text-center relative z-10">
+        <div class="container mx-auto px-4 text-center relative z-10">
             <div class="max-w-3xl mx-auto">
                 <!-- Badge de confiance -->
-                <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full mb-8">
-                    <span class="text-white text-sm font-medium">Depuis 1988 - Entreprise locale</span>
+                <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-4 md:px-6 py-2 rounded-full mb-6 md:mb-8">
+                    <span class="text-white text-xs md:text-sm font-medium">Depuis 1988 - Entreprise locale</span>
                 </div>
                 
                 <!-- Titre principal -->
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight hero-title">
+                <h2 class="text-3xl md:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
                     Nettoyage professionnel<br>
                     <span class="text-secondary">en Haute-Savoie</span>
                 </h2>
                 
                 <!-- Sous-titre -->
-                <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+                <p class="text-lg md:text-2xl mb-6 md:mb-8 text-white/90 max-w-2xl mx-auto">
                     Des bureaux propres pour une entreprise saine et productive
                 </p>
                 
-                <!-- Bouton CTA -->
+                <!-- Boutons CTA -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#contact" class="button bg-secondary hover:bg-secondary/90 text-white px-8 py-4 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="#contact" class="w-full sm:w-auto button bg-secondary hover:bg-secondary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                         <i class="fas fa-envelope mr-2"></i>
                         Demander un devis
                     </a>
-                    <a href="tel:0600000000" class="button bg-white/10 hover:bg-white/20 text-white px-8 py-4 text-lg font-medium rounded-full backdrop-blur-sm transition-all duration-300">
+                    <a href="tel:0600000000" class="w-full sm:w-auto button bg-white/10 hover:bg-white/20 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium rounded-full backdrop-blur-sm transition-all duration-300">
                         <i class="fas fa-phone mr-2"></i>
                         Nous appeler
                     </a>
                 </div>
                 
                 <!-- Statistiques -->
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16">
                     <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">35+</div>
+                        <div class="text-2xl md:text-4xl font-bold text-secondary mb-2">35+</div>
                         <div class="text-secondary font-medium">Années d'expérience</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">100+</div>
+                        <div class="text-2xl md:text-4xl font-bold text-secondary mb-2">100+</div>
                         <div class="text-secondary font-medium">Clients satisfaits</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-2xl md:text-4xl font-bold text-secondary mb-2">24/7</div>
                         <div class="text-secondary font-medium">Service réactif</div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Vague décorative en bas -->
-        <div class="absolute bottom-0 left-0 right-0">
-            <svg class="w-full h-16 md:h-24" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path fill="#f8f5f2" d="M0,0 L1440,0 L1440,100 C1440,100 720,50 0,100 Z"></path>
-            </svg>
-        </div>
     </section>
 
     <!-- À propos -->
-    <section id="apropos" class="py-24 bg-white" data-aos="fade-up">
+    <section id="apropos" class="py-16 md:py-24 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">À propos de nous</h2>
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">À propos de nous</h2>
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
                     <p class="text-gray-700 mb-4">Depuis 1988, Rumilly Nettoyage s'engage à fournir des services de nettoyage professionnel de haute qualité aux entreprises de la région annécienne.</p>
                     <p class="text-gray-700 mb-4">Notre équipe expérimentée prend soin de vos locaux avec rigueur et professionnalisme, en utilisant des produits adaptés et respectueux de l'environnement.</p>
                     <p class="text-gray-700">Basés à Vallière-sur-Fier, nous couvrons tout le bassin annécien pour vous offrir un service local et réactif.</p>
                 </div>
                 
-                <div class="md:w-1/2 bg-gray-100 p-8 rounded-lg">
+                <div class="md:w-1/2 bg-gray-100 p-6 md:p-8 rounded-lg">
                     <h3 class="text-xl font-bold text-secondary mb-4">Nos valeurs</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start">
@@ -244,14 +243,14 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-24 bg-gray-50" data-aos="fade-up">
-        <div class="container mx-auto container-padding">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Nos services</h2>
+    <section id="services" class="py-16 md:py-24 bg-gray-50" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Nos services</h2>
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Service 1 -->
                 <div class="interactive-card glassmorphism p-6" data-aos="fade-up">
                     <div class="text-secondary text-4xl mb-4">
@@ -412,15 +411,15 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-white" data-aos="fade-up">
-        <div class="container mx-auto container-padding">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
+    <section id="contact" class="py-16 md:py-24 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Contactez-nous</h2>
                 <div class="w-20 h-1 bg-secondary mx-auto"></div>
             </div>
             
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
                     <h3 class="text-xl font-bold text-secondary mb-4">Nos coordonnées</h3>
                     
                     <div class="space-y-6">
@@ -469,7 +468,7 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <div class="glassmorphism p-6">
+                    <div class="glassmorphism p-4 md:p-6">
                         <h3 class="text-xl font-bold text-secondary mb-6">Demandez un devis</h3>
                         
                         <!-- Success message (hidden by default) -->
