@@ -104,7 +104,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class="bg-white shadow-md fixed w-full top-0 z-50">
+<header class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <!-- Logo + Titre -->
@@ -119,19 +119,10 @@
             </div>
 
             <!-- Menu mobile -->
-            <div class="md:hidden w-full">
-                <button id="mobile-menu-button" class="w-full flex justify-between items-center text-primary py-2">
-                    <span>Menu</span>
-                    <i class="fas fa-bars"></i>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary" aria-label="Menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
-                <nav id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4">
-                    <ul class="flex flex-col space-y-2 px-4">
-                        <li><a href="#accueil" class="block py-2 text-primary hover:text-secondary">Accueil</a></li>
-                        <li><a href="#apropos" class="block py-2 text-primary hover:text-secondary">À propos</a></li>
-                        <li><a href="#services" class="block py-2 text-primary hover:text-secondary">Services</a></li>
-                        <li><a href="#contact" class="block py-2 text-primary hover:text-secondary">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
 
             <!-- Menu desktop -->
@@ -144,6 +135,16 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Menu mobile déroulant -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4">
+            <ul class="flex flex-col space-y-2">
+                <li><a href="#accueil" class="block py-2 text-primary hover:text-secondary">Accueil</a></li>
+                <li><a href="#apropos" class="block py-2 text-primary hover:text-secondary">À propos</a></li>
+                <li><a href="#services" class="block py-2 text-primary hover:text-secondary">Services</a></li>
+                <li><a href="#contact" class="block py-2 text-primary hover:text-secondary">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -557,7 +558,7 @@
 
     <script>
         // Mobile menu toggle
-        document.querySelector('button[aria-label="Ouvrir le menu"]').addEventListener('click', function() {
+        document.querySelector('button[aria-label="Menu"]').addEventListener('click', function() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('hidden');
             nav.classList.toggle('block');

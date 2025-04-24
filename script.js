@@ -501,15 +501,39 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const headerOffset = 80; // Hauteur du header
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
+                target.scrollIntoView({
                     behavior: 'smooth'
                 });
             }
         });
+    });
+});
+
+// Gestion du formulaire de contact
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const loader = document.getElementById('loader');
+    const successMessage = document.getElementById('success-message');
+    
+    if (loader) loader.classList.remove('hidden');
+    
+    fetch('/', {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(() => {
+        if (loader) loader.classList.add('hidden');
+        if (successMessage) {
+            successMessage.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        }
+    })
+    .catch(() => {
+        if (loader) loader.classList.add('hidden');
+        alert('Une erreur est survenue lors de l\'envoi du formulaire.');
     });
 });
